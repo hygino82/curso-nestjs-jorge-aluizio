@@ -10,6 +10,12 @@ export class CoursesService {
       description: 'YouTube Curso Framework NestJS',
       tags: ['node.js', 'nest.js', 'javascript'],
     },
+    {
+      id: 2,
+      name: 'SpringBoot',
+      description: 'Tutorial SpringBoot',
+      tags: ['Java', 'Spring', 'Maven'],
+    },
   ];
 
   findAll() {
