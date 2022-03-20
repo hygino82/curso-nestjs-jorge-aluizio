@@ -11,8 +11,12 @@ import {
   Res,
 } from '@nestjs/common';
 
+import { CoursesService } from './courses.service';
+
 @Controller('courses')
 export class CoursesController {
+  constructor(private readonly coursesService: CoursesService) {}
+
   @Get()
   findAll(@Res() response) {
     return response.status(200).send('Listagem de cursos');
@@ -31,7 +35,7 @@ export class CoursesController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body) {
-    return `Atualização do Curso # ${id}`;
+    return `Atualização do Curso # ${id}\n` + body.name;
   }
 
   @Delete(':id')
