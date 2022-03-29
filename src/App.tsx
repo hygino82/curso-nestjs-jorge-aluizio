@@ -1,12 +1,21 @@
-import React, { Fragment } from 'react';
-import Home from './components/Home';
+import Header from './components/Header';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <Fragment>
-      <Home />
+    <>
+      <Header title='Página inicial'/>
+      <Header title='Página do desenvolvedor'/>
       <h1>Olá Dev!</h1>
-    </Fragment>
+
+      <Menu>
+        <ul>
+          <li>Home</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </Menu>
+    </>
   );
 }
 
